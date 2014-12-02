@@ -1,23 +1,24 @@
 # config valid only for current version of Capistrano
 lock '3.3.3'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'demo_deploy'
+set :user, 'delannoo'
+set :repo_url, 'git@github.com:dalfy/rails_capistrano.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
+set :deploy_to, '/home/#{user}/example_deploy/#{application}'
 
 # Default value for :scm is :git
-# set :scm, :git
+ set :scm, :git
 
 # Default value for :format is :pretty
-# set :format, :pretty
+set :format, :pretty
 
 # Default value for :log_level is :debug
-# set :log_level, :debug
+set :log_level, :debug
 
 # Default value for :pty is false
 # set :pty, true
